@@ -29,6 +29,49 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Layout containers and inputs */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: left;
+}
+
+h1, h2, h3 {
+  margin: 0 0 8px 0;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  outline: none;
+}
+
+table th, table td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.btn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

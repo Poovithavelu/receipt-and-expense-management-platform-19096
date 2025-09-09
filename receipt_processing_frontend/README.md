@@ -1,82 +1,31 @@
-# Lightweight React Template for KAVIA
+# Receipt Processing Frontend (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+Responsive UI for uploading, processing, managing, and searching documents (receipts/invoices) with an admin dashboard. Built with React and minimal dependencies, ready for future Figma-based design integration.
 
-## Features
+## Pages
+- Upload: drag-and-drop or select files, shows upload queue
+- Processing: live status view with polling
+- Documents: paginated list with basic filters
+- Document Details: summary, extracted fields (OCR), versions/history
+- Search: advanced filters and quick results
+- Admin: statistics, recent activity, system health
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Environment Variables
+Do not hardcode backend URLs. Configure via `.env`:
+- REACT_APP_API_BASE_URL: Base URL for the backend API (e.g., http://localhost:8080)
 
-## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+Create a `.env.local` for development:
+```
+REACT_APP_API_BASE_URL=http://localhost:8080
 ```
 
-### Components
+## Scripts
+- npm start - start dev server
+- npm test - run tests
+- npm run build - production build
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+- Routing: react-router-dom v6
+- Global State: React Context (src/context/DocumentContext.js)
+- API Client: src/services/api.js
+- Styling: CSS variables with light/dark theme toggle
