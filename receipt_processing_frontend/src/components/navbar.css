@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary, #f8f9fa);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color, #e9ecef);
+}
+.brand {
+  color: var(--text-primary, #1a1a1a);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+.nav-center {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.nav-link {
+  color: var(--text-primary, #1a1a1a);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.nav-link:hover {
+  background: var(--bg-primary, #fff);
+}
+.nav-link.active {
+  background: var(--button-bg, #007bff);
+  color: var(--button-text, #fff);
+}
+.theme-toggle-btn {
+  background: var(--button-bg, #007bff);
+  color: var(--button-text, #fff);
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
